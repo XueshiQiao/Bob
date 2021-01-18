@@ -8,7 +8,7 @@
 
 #import "Configuration.h"
 #import <ServiceManagement/ServiceManagement.h>
-#import <Sparkle/Sparkle.h>
+//#import <Sparkle/Sparkle.h>
 
 #define kAutoCopyTranslateResultKey @"configuration_auto_copy_translate_result"
 #define kLaunchAtStartupKey @"configuration_launch_at_startup"
@@ -59,7 +59,8 @@ static Configuration *_instance;
 }
 
 - (BOOL)automaticallyChecksForUpdates {
-    return [SUUpdater sharedUpdater].automaticallyChecksForUpdates;
+    return NO;
+//    return [SUUpdater sharedUpdater].automaticallyChecksForUpdates;
 }
 
 #pragma mark - setter
@@ -75,7 +76,7 @@ static Configuration *_instance;
 }
 
 - (void)setAutomaticallyChecksForUpdates:(BOOL)automaticallyChecksForUpdates {
-    [[SUUpdater sharedUpdater] setAutomaticallyChecksForUpdates:automaticallyChecksForUpdates];
+//    [[SUUpdater sharedUpdater] setAutomaticallyChecksForUpdates:automaticallyChecksForUpdates];
 }
 
 - (void)setTranslateIdentifier:(NSString *)translateIdentifier {

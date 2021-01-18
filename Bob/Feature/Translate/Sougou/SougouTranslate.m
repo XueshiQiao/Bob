@@ -71,9 +71,9 @@
         completion(nil, TranslateError(TranslateErrorTypeParam, @"翻译的文本为空", nil));
         return;
     }
-#error 请在下方输入你的pid和key，可以去https://deepi.sogou.com/?from=translatepc申请
-    NSString *pid = @"";
-    NSString *key = @"";
+
+    NSString *pid = @"d984d27cd30223c61ab6080599571176";
+    NSString *key = @"fa07c5741ace3596440c477761b6e1c";
     NSString *salt = [@([[NSDate date] timeIntervalSince1970]) stringValue];
     NSString *sign = [[NSString stringWithFormat:@"%@%@%@%@", pid, text, salt, key] MD5];
     
